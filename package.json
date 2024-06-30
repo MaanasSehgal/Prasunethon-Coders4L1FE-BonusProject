@@ -11,6 +11,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@google/generative-ai": "^0.14.0",
     "@nextui-org/divider": "^2.0.28",
     "@nextui-org/react": "^2.4.2",
     "@nextui-org/scroll-shadow": "^2.1.17",
