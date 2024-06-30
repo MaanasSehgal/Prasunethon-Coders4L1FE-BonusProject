@@ -13,7 +13,7 @@ export default function FooterComp() {
                             <h1>&nbsp;Smart City</h1>
                         </div>
                         <p className="py-8 text-sm text-[--darkText2] lg:max-w-xs text-center lg:text-left">Connecting people with real life efficient alternatives!</p>
-                        <div className="py-2.5 px-5 h-9 block w-fit bg-[--darkBtn] rounded-full shadow-sm text-xs text-[darkText1] mx-auto transition-all  duration-500 hover:bg-slate-100 lg:mx-0">
+                        <div className="cursor-pointer py-2.5 px-5 h-9 block w-fit bg-[--darkBtn] rounded-full shadow-sm text-xs text-[darkText1] mx-auto transition-all  duration-500 hover:bg-slate-100 lg:mx-0">
                             Contact us
                         </div>
                     </div>

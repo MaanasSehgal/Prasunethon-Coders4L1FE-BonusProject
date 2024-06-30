@@ -26,9 +26,9 @@ const ReportSection = () => {
                     </div>
                 </div>
                 <form className="md:w-1/2 w-full h-1/2 md:h-full flex flex-col justify-center items-center gap-4 bg-white rounded-[36px] p-4 pt-12 shadow-lg">
-                    <Input type="text" placeholder="Enter your name" name="name" className="w-11/12 md:w-3/4 p-4 text-gray-800 rounded-xl" variant="underlined" required />
-                    <input type="email" placeholder="Enter your email" name="email" className="w-11/12 md:w-3/4 p-4 text-gray-800 rounded-xl" variant="underlined" required />
-                    <textarea className="w-11/12 md:w-3/4 h-[30%] md:h-2/5 p-2 border border-gray-300 rounded-xl" name="feedback" placeholder="What issue are you facing?" required></textarea>
+                    <Input type="text" placeholder="Enter your name" name="name" className="w-11/12 md:w-3/4 p-4 text-gray-800 rounded-xl outline" variant="underlined" required />
+                    <input type="email" placeholder="Enter your email" name="email" className="w-11/12 md:w-3/4 p-4 outline text-gray-800 rounded-xl" variant="underlined" required />
+                    <textarea className="w-11/12 md:w-3/4 h-[30%] md:h-2/5 p-2 border outline border-gray-300 rounded-xl" name="feedback" placeholder="What issue are you facing?" required></textarea>
                     <input className="hidden" id="picture" type="file" accept="image/*" onChange={handleFileChange} />
                     <label htmlFor="picture" className="cursor-pointer bg-blue-500 text-white py-2 px-4 rounded-lg shadow-md hover:bg-blue-600">
                         {fileName ? `Uploaded ${fileName}` : "Choose a picture"}
