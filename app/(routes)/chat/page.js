@@ -48,8 +48,8 @@ const Gemini = () => {
                         )}
                     </div>
                     <div className="p-4 border-t border-gray-300 flex justify-center items-center py-4 px-4">
-                        <Input type="text" placeholder="What help do you need today?" value={userPrompt} onChange={(e) => setUserPrompt(e.target.value)} className="mb-2" />
-                        <Button className="bg-rose-400 text-lg font-bold rounded-full flex " variant="ghost" color="danger" onClick={handleGenerate} disabled={loading || !userPrompt}>
+                        <Input type="text" placeholder="What help do you need today?" value={userPrompt} onChange={(e) => setUserPrompt(e.target.value)} className="mb-2 h-10" />
+                        <Button className="bg-rose-400 text-lg font-bold rounded-full flex justify-center items-center p-4 h-10" variant="ghost" color="danger" onClick={handleGenerate} disabled={loading || !userPrompt}>
                             {loading ? "Generating..." : "Generate"}
                         </Button>
                     </div>
