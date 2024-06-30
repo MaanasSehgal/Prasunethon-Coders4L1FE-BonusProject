@@ -74,7 +74,7 @@ const page = () => {
                                 Password
                             </label>
                             <a href="#" className="text-xs text-gray-500 hover:underline">
-                                Forget Password?
+                                Forgot Password?
                             </a>
                         </div>
 

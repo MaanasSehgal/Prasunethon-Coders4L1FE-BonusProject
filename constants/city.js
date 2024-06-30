@@ -1,5 +1,12 @@
 export const cityData = [
     {
+        name: "Delhi",
+        west: 76.86,
+        south: 28.59,
+        east: 77.25,
+        north: 28.82,
+    },
+    {
         name: "Agra",
         west: 77.96,
         south: 27.15,
@@ -40,13 +47,6 @@ export const cityData = [
         south: 12.97,
         east: 80.34,
         north: 13.15,
-    },
-    {
-        name: "Delhi",
-        west: 76.86,
-        south: 28.59,
-        east: 77.25,
-        north: 28.82,
     },
     {
         name: "Dhanbad",

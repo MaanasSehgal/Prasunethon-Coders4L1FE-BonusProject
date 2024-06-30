@@ -4,9 +4,8 @@ import ServiceCard from "./ServiceCard";
 const Service = () => {
     return (
         <>
-            <h1 id="scroll-to-services" className="text-3xl pl-20 font-bold w-full text-center mt-8">
-                Services we offer
-            </h1>
+            <br/>
+            <h1 className="text-3xl font-bold w-full text-center mt-8">Services we offer</h1>
             <div className="w-full flex justify-center py-10 gap-12 flex-wrap">
                 <ServiceCard
                     title="Health Services"

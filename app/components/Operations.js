@@ -1,12 +1,15 @@
 "use client";
-import React from "react";
+import React, {useState, useEffect} from "react";
 import getIncidents from "../../actions/get-incidents.js";
 import {cityData} from "../../constants/city.js";
 import {Spinner} from "@nextui-org/spinner";
 
+const ITEMS_PER_PAGE = 5;
+
 const Operations = () => {
     const [data, setData] = React.useState([]);
     const [selectedIncident, setSelectedIncident] = React.useState(cityData[0]);
+    const [currentPage, setCurrentPage] = useState(1);
     const fetchData = async () => {
         const response = await getIncidents({
             west: selectedIncident.west,
@@ -18,9 +21,23 @@ const Operations = () => {
         console.log(response.resourceSets[0].resources);
     };
 
-    React.useEffect(() => {
+    useEffect(() => {
         fetchData();
     }, [selectedIncident]);
+
+    //Pagination
+    const totalPages = Math.ceil(data.length / ITEMS_PER_PAGE);
+
+    const handleNextPage = () => {
+        setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPages));
+    };
+
+    const handlePrevPage = () => {
+        setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
+    };
+
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const paginatedData = data.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
     return (
         <>
@@ -28,7 +45,7 @@ const Operations = () => {
                 <section>
                     <div className="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
                         <div className="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-x-16">
-                            <div className="mx-auto max-w-lg  lg:mx-0 ltr:lg:text-left rtl:lg:text-right">
+                            <div className="mx-auto max-w-lg lg:mx-0 ltr:lg:text-left rtl:lg:text-right">
                                 <h2 className="text-3xl font-bold sm:text-4xl">Enhance City Operations</h2>
 
                                 <p className="mt-4 text-gray-600">
@@ -155,7 +172,7 @@ const Operations = () => {
                         </div>
                     </div>
                 </section>
-
+                <br id="scroll-to-operations" />
                 <div className="flex justify-center items-center flex-col">
                     <h1 className="text-3xl font-bold pl-4">Real Time Traffic Data</h1>
                     <div className="p-4 mb-4">
@@ -169,9 +186,9 @@ const Operations = () => {
                     </div>
                 </div>
 
-                <div className="w-2/3 h-[500px] mx-auto overflow-y-auto p-4">
-                    {data.length > 0 ? (
-                        data.map((item, index) => (
+                <div className="w-2/3 mx-auto overflow-y-auto p-4">
+                    {paginatedData.length > 0 ? (
+                        paginatedData.map((item, index) => (
                             <div key={index} className="border border-gray-300 p-4 rounded-3xl shadow-lg mb-4">
                                 <h1 className="font-semibold text-xl mb-2">{item.title}</h1>
                                 <p className="text-red-500 font-medium mb-2">Severity: {item.severity}</p>
@@ -184,9 +201,22 @@ const Operations = () => {
                             <Spinner size="lg" />
                         </div>
                     )}
+                    <div className="flex justify-between mt-4">
+                        <button onClick={handlePrevPage} disabled={currentPage === 1} className="px-4 py-2 bg-blue-500 text-white rounded-md disabled:bg-gray-300">
+                            Previous
+                        </button>
+                        <span className="px-4 py-2">
+                            Page {currentPage} of {totalPages}
+                        </span>
+                        <button onClick={handleNextPage} disabled={currentPage === totalPages} className="px-4 py-2 bg-blue-500 text-white rounded-md disabled:bg-gray-300">
+                            Next
+                        </button>
+                    </div>
                 </div>
             </div>
-            <br/><br/><br/>
+            <br />
+            <br />
+            <br />
         </>
     );
 };

@@ -12,7 +12,7 @@ const page = () => {
         <>
             <NavComp />
             <Hero />
-            <Divider />
+            <Divider id="scroll-to-services" />
             <Service />
             <Divider />
             <Operations />
