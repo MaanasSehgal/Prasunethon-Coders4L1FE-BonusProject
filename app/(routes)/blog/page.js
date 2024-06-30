@@ -6,8 +6,8 @@ const Page = () => {
     return (
         <>
             <NavComp />
-            <div className="w-full min-h-screen scroll-smooth bg-gray-100 pt-12">
-                <div className="w-full min-h-screen pt-24">
+            <div className="w-full min-h-screen scroll-smooth bg-gray-100 sm:pt-14">
+                <div className="w-full min-h-screen pt-20 lg:pt-24">
                     <div className="bg-white shadow-xl rounded-lg p-8 mx-auto max-w-4xl">
                         <div className="border-b pb-4 mb-6">
                             <h2 className="text-3xl font-bold text-gray-800">Smart Cities: A Path to Sustainable Urban Living</h2>

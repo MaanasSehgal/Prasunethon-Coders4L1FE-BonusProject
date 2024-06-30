@@ -9,13 +9,7 @@ export default function FooterComp() {
                 <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-8 py-10 max-sm:max-w-sm max-sm:mx-auto gap-y-8">
                     <div className="col-span-full mb-10 lg:col-span-2 lg:mb-0">
                         <div className="flex justify-center lg:justify-start items-center">
-                            <Image
-                                className="w-12 h-12 rounded-full object-cover object-center"
-                                src="https://img.stackshare.io/service/49174/default_ad73480a9edf794cd4067ee7e1bb77191b6b23dc.png"
-                                width={200}
-                                height={200}
-                                alt="logo"
-                            />
+                            <Image className="w-14 h-14 rounded-full object-cover object-center" src="/smartcity.png" width={200} height={200} alt="logo" />
                             <h1>&nbsp;Smart City</h1>
                         </div>
                         <p className="py-8 text-sm text-[--darkText2] lg:max-w-xs text-center lg:text-left">Connecting people with real life efficient alternatives!</p>

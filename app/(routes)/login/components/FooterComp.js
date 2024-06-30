@@ -9,22 +9,16 @@ export default function FooterComp() {
                 <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-8 py-10 max-sm:max-w-sm max-sm:mx-auto gap-y-8">
                     <div className="col-span-full mb-10 lg:col-span-2 lg:mb-0">
                         <div className="flex justify-center lg:justify-start items-center">
-                            <Image
-                                className="w-12 h-12 rounded-full object-cover object-center"
-                                src="https://img.stackshare.io/service/49174/default_ad73480a9edf794cd4067ee7e1bb77191b6b23dc.png"
-                                width={200}
-                                height={200}
-                                alt="logo"
-                            />
+                            <Image className="w-14 h-14 rounded-full object-cover object-center" src="/smartcity.png" width={200} height={200} alt="logo" />
                             <h1>&nbsp;Smart City</h1>
                         </div>
-                        <p className="py-8 text-sm text-[--darkText2] lg:max-w-xs text-center lg:text-left">Trusted by top developers all over the world. Have any query?</p>
-                        <div className="py-2.5 px-5 h-9 block w-fit bg-[--darkBtn] rounded-full shadow-sm text-xs text-[darkText1] mx-auto transition-all  duration-500 hover:bg-indigo-700 lg:mx-0">
+                        <p className="py-8 text-sm text-[--darkText2] lg:max-w-xs text-center lg:text-left">Connecting people with real life efficient alternatives!</p>
+                        <div className="py-2.5 px-5 h-9 block w-fit bg-[--darkBtn] rounded-full shadow-sm text-xs text-[darkText1] mx-auto transition-all  duration-500 hover:bg-slate-100 lg:mx-0">
                             Contact us
                         </div>
                     </div>
                     <div className="lg:mx-auto text-left">
-                        <h4 className="text-lg text-[--darkText1] font-medium mb-7">RTCT</h4>
+                        <h4 className="text-lg text-[--darkText1] font-medium mb-7">Smart City</h4>
                         <ul className="text-sm  transition-all duration-500">
                             <li className="mb-6">
                                 <div onClick={() => scrollToFunc("scroll-to-home")} className="text-[--darkText2] hover:text-[--darkText1] cursor-pointer">
@@ -47,13 +41,13 @@ export default function FooterComp() {
                         <h4 className="text-lg text-[--darkText1] font-medium mb-7">Products</h4>
                         <ul className="text-sm  transition-all duration-500">
                             <li className="mb-6">
-                                <div className="text-[--darkText2] hover:text-[--darkText1] cursor-pointer">Collaborative coding</div>
+                                <div className="text-[--darkText2] hover:text-[--darkText1] cursor-pointer">Services</div>
                             </li>
                             <li className="mb-6">
-                                <div className="text-[--darkText2] hover:text-[--darkText1] cursor-pointer">Task Management</div>
+                                <div className="text-[--darkText2] hover:text-[--darkText1] cursor-pointer">Report</div>
                             </li>
                             <li>
-                                <div className="text-[--darkText2] hover:text-[--darkText1] cursor-pointer">Progress Tracking</div>
+                                <div className="text-[--darkText2] hover:text-[--darkText1] cursor-pointer">Operations</div>
                             </li>
                         </ul>
                     </div>

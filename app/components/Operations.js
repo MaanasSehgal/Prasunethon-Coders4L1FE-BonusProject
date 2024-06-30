@@ -169,7 +169,7 @@ const Operations = () => {
                     </div>
                 </div>
 
-                <div className="w-2/3 h-[500px] mx-auto overflow-y-scroll p-4">
+                <div className="w-2/3 h-[500px] mx-auto overflow-y-auto p-4">
                     {data.length > 0 ? (
                         data.map((item, index) => (
                             <div key={index} className="border border-gray-300 p-4 rounded-3xl shadow-lg mb-4">

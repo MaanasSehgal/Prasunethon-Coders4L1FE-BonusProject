@@ -47,8 +47,8 @@ export default function NavComp() {
                 <div className="flex justify-between items-center xl:max-w-7xl xl:mx-auto max-w-full px-[8%] flex-wrap h-18">
                     <Link href="/">
                         <Image
-                            className=" object-cover object-center w-12 h-12 cursor-pointer"
-                            src="https://img.stackshare.io/service/49174/default_ad73480a9edf794cd4067ee7e1bb77191b6b23dc.png"
+                            className="object-cover object-center w-20 h-20 cursor-pointer"
+                            src="/smartcity.png"
                             alt="logo"
                             width={200}
                             height={200}
